@@ -57,7 +57,7 @@ function AdminApp() {
 
   return (
     <div className="admin-layout">
-      {/* Overlay for mobile sidebar */}
+      {/* Overlay for mobile sidebars */}
       {mobileSidebarOpen && (
         <div
           className="sidebar-overlay"

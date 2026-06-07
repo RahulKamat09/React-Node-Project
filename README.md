@@ -66,11 +66,14 @@ Shop Aura is a full-stack e-commerce application built with a React/Vite fronten
    ```bash
    npm install
    ```
-3. Create or verify `.env` in `Backend/` with your MongoDB connection string:
+3. Create or verify `.env` in `Backend/` with your MongoDB connection string and backend secrets:
    ```env
    PORT=5000
    MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<database>?retryWrites=true&w=majority
+   JWT_SECRET=your_jwt_secret
+   FRONTEND_URL=http://localhost:5173
    ```
+   You can also copy `Backend/.env.example` and fill in your values.
 4. Start the backend server:
    ```bash
    npm run dev
@@ -83,7 +86,12 @@ Shop Aura is a full-stack e-commerce application built with a React/Vite fronten
    ```bash
    npm install
    ```
-3. Start the frontend development server:
+3. Create or verify `.env` in `Frontend/` with your API URL for local development:
+   ```env
+   VITE_API_URL=http://localhost:5000
+   ```
+   Copy `Frontend/.env.example` and fill in the value.
+4. Start the frontend development server:
    ```bash
    npm run dev
    ```
